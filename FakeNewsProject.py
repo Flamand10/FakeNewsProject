@@ -15,6 +15,9 @@ def cleanF(text) :
      #makes csv to a single string
     text = " ".join(text.astype(str).agg(" ".join, axis=1))
 
+     #fix unicode 
+    text = text.encode("utf-8", "ignore").decode("utf-8")
+
     #tokenize without punkt, only words
     word_tokens = re.findall(r'\b\w+\b', text)
 
@@ -44,8 +47,8 @@ def cleanF(text) :
     print(f"Reduction Rate After Stemming: {stemming_reduction_rate:.2f}%")
 #print(cleanF(df))
 
-FakeNewsCorpus = pd.read_csv('995,000_rows.csv', dtype=str)
+FakeNewsCorpus = pd.read_csv('995,000_rows.csv', dtype=str, encoding='utf-8', errors='replace')
 
 cleanF(FakeNewsCorpus)
 
-FakeNewsCorpus.to_csv('news_sample_reduced.csv', index=False)
+FakeNewsCorpus.to_csv('news_sample_reduced.csv', index=False, encoding='utf-8')
