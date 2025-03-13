@@ -3,13 +3,13 @@ import pandas as pd
 import re
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-# nltk.download('stopwords') for at det virker
+nltk.download('stopwords') 
 
 #nltk stopwords
 stop_words = set(stopwords.words('english'))
 
 #read csv
-df = pd.read_csv('exam/news_sample.csv', encoding='utf-8')
+#df = pd.read_csv('news_sample.csv', encoding='utf-8')
 
 def cleanF(text) :
      #makes csv to a single string
@@ -42,7 +42,10 @@ def cleanF(text) :
     print(f"Reduction Rate After Stopword Removal: {stopword_reduction_rate:.2f}%")
     print(f"Vocabulary Size After Stemming: {stemmed_vocab_size}")
     print(f"Reduction Rate After Stemming: {stemming_reduction_rate:.2f}%")
-# print(cleanF(df))
+#print(cleanF(df))
 
-FakeNewsCorpus = pd.read_csv('exam/995,000_rows.csv', dtype=str)
+FakeNewsCorpus = pd.read_csv('995,000_rows.csv', dtype=str)
+
 cleanF(FakeNewsCorpus)
+
+FakeNewsCorpus.to_csv('news_sample_reduced.csv', index=False)
