@@ -1,19 +1,24 @@
 import nltk
 import pandas as pd
 import re
+import os
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-import os
-# nltk.download('stopwords') for at det virker
+from nltk.tokenize import word_tokenize
 
+# Ensure necessary downloads
+nltk.download('stopwords')
+nltk.download('punkt')
 
-#read csv
-
+# Read CSV & process
 def cleanF(file_path):
     df = pd.read_csv(file_path, dtype=str)
-    stop_words = set(stopwords.words('english'))
+    
+    # Ensure stopwords are lowercase
+    stop_words = set(w.lower() for w in stopwords.words('english'))
     stemmer = PorterStemmer()
 
+    # Vocab tracking
     original_vocab = set()
     filtered_vocab = set()
     stemmed_vocab = set()
@@ -21,26 +26,30 @@ def cleanF(file_path):
     def clean_text(text):
         if not isinstance(text, str):
             text = str(text)
-        # Tokenize without punctuation, only words
-        word_tokens = re.findall(r'\b\w+\b', text)
+
+        # Tokenization (BETTER method than regex)
+        word_tokens = word_tokenize(text)
         original_vocab.update(word_tokens)
-        # Remove stopwords
-        filtered_tokens = [w for w in word_tokens if w.lower() not in stop_words]
+
+        # Stopword removal (ignore non-alphabetic words)
+        filtered_tokens = [w.lower() for w in word_tokens if w.isalpha() and w.lower() not in stop_words]
         filtered_vocab.update(filtered_tokens)
+
         # Stemming
         stemmed_tokens = [stemmer.stem(w) for w in filtered_tokens]
         stemmed_vocab.update(stemmed_tokens)
+
         return " ".join(stemmed_tokens)
 
-    # Apply cleaning to each column
-    cleaned_df = df.applymap(clean_text)
+    # Apply cleaning function to each column
+    cleaned_df = df.map(clean_text)
 
-    # Calculate vocabulary sizes and reduction rates
+    # Calculate vocabulary sizes & reduction rates
     OG_vocab_size = len(original_vocab)
     filtered_vocab_size = len(filtered_vocab)
     stemmed_vocab_size = len(stemmed_vocab)
-    stopword_reduction_rate = ((OG_vocab_size - filtered_vocab_size) / OG_vocab_size * 100)
-    stemming_reduction_rate = ((filtered_vocab_size - stemmed_vocab_size) / filtered_vocab_size * 100)
+    stopword_reduction_rate = ((OG_vocab_size - filtered_vocab_size) / OG_vocab_size * 100) if OG_vocab_size else 0
+    stemming_reduction_rate = ((filtered_vocab_size - stemmed_vocab_size) / filtered_vocab_size * 100) if filtered_vocab_size else 0
 
     # Print statistics
     print(f"Original Vocabulary Size: {OG_vocab_size}")
@@ -49,11 +58,13 @@ def cleanF(file_path):
     print(f"Vocabulary Size After Stemming: {stemmed_vocab_size}")
     print(f"Reduction Rate After Stemming: {stemming_reduction_rate:.2f}%")
 
-    # Generate new file name with 'cleaned' added to the current CSV name
+    # Generate new file name correctly
     base_name, ext = os.path.splitext(file_path)
     new_file_name = f"{base_name}_cleaned{ext}"
     
+    # Save cleaned data
     cleaned_df.to_csv(new_file_name, index=False)
+    print(f" Successfully saved cleaned dataset: {new_file_name}")
 
 # Example usage with multiple files
 file_paths = ['news_sample.csv', '995,000_rows.csv']
