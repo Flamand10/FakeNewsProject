@@ -1,14 +1,13 @@
 import nltk
 import pandas as pd
-import re
 import os
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 
 # Ensure necessary downloads
-nltk.download('stopwords')
-nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('punkt')
 
 # Read CSV & process
 def cleanF(file_path):
@@ -42,7 +41,9 @@ def cleanF(file_path):
         return " ".join(stemmed_tokens)
 
     # Apply cleaning function to each column
-    cleaned_df = df.map(clean_text)
+    for col in ['content', 'summary']:
+        if col in df.columns:
+            df[col] = df[col].apply(clean_text)
 
     # Calculate vocabulary sizes & reduction rates
     OG_vocab_size = len(original_vocab)
@@ -63,10 +64,9 @@ def cleanF(file_path):
     new_file_name = f"{base_name}_cleaned{ext}"
     
     # Save cleaned data
-    cleaned_df.to_csv(new_file_name, index=False)
+    df.to_csv(new_file_name, index=False)
     print(f" Successfully saved cleaned dataset: {new_file_name}")
 
-# Example usage with multiple files
 file_paths = ['news_sample.csv', '995,000_rows.csv']
 for file_path in file_paths:
     cleanF(file_path)
