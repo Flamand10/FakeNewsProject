@@ -48,46 +48,43 @@ Reduction Rate After Stemming: 12.75%
 
 
 
-### Result from 'Part4Evaluation.ipynb':
-- Evaluated on fake news corpus:
- - "Columns in train_set: Index(['Unnamed: 0', 'id', 'domain', 'type', 'url', 'content', 'scraped_at',
-       'inserted_at', 'updated_at', 'title', 'authors', 'keywords',
-       'meta_keywords', 'meta_description', 'tags', 'summary', 'source'],
-      dtype='object')
-Columns in val_set: Index(['Unnamed: 0', 'id', 'domain', 'type', 'url', 'content', 'scraped_at',
-       'inserted_at', 'updated_at', 'title', 'authors', 'keywords',
-       'meta_keywords', 'meta_description', 'tags', 'summary', 'source'],
-      dtype='object')
-Columns in test_set: Index(['Unnamed: 0', 'id', 'domain', 'type', 'url', 'content', 'scraped_at',
-       'inserted_at', 'updated_at', 'title', 'authors', 'keywords',
-       'meta_keywords', 'meta_description', 'tags', 'summary', 'source'],
-      dtype='object')
-F1 Score on Validation Set (SVM + TF-IDF): 0.89
-F1 Score on Test Set (SVM + TF-IDF): 0.89" <br>
+## Result from 'Part4Evaluation.ipynb':
+This notebook evaluates the performance of an SVM + TF-IDF model on three different test sets:  
+1. The original FakeNewsCorpus  
+2. The FakeNewsCorpus extended with 800 scraped articles  
+3. The LIAR dataset (cross-domain evaluation)
+   
+---
 
+### Results Summary
 
-- Evaluated on fake news corpus + 800 scraped articles:
- - "Columns in train_set: Index(['Unnamed: 0', 'id', 'domain', 'type', 'url', 'content', 'scraped_at',
-       'inserted_at', 'updated_at', 'title', 'authors', 'keywords',
-       'meta_keywords', 'meta_description', 'tags', 'summary', 'source'],
-      dtype='object')
-Columns in val_set: Index(['Unnamed: 0', 'id', 'domain', 'type', 'url', 'content', 'scraped_at',
-       'inserted_at', 'updated_at', 'title', 'authors', 'keywords',
-       'meta_keywords', 'meta_description', 'tags', 'summary', 'source'],
-      dtype='object')
-Columns in test_set: Index(['content', 'label'], dtype='object')
-F1 Score on Validation Set (SVM + TF-IDF): 0.89
-F1 Score on Test Set (SVM + TF-IDF): 0.90" <br>
+| Dataset                     | Validation F1 | Test F1 |
+|----------------------------|---------------|---------|
+| FakeNewsCorpus             | 0.89          | 0.89    |
+| FNC + 800 scraped articles | 0.89          | 0.90    |
+| LIAR (cross-domain)        | 0.89          | 0.03    |
 
-- Evaluation on LIAR dataset:
- - "Columns in train_set: Index(['Unnamed: 0', 'id', 'domain', 'type', 'url', 'content', 'scraped_at',
-       'inserted_at', 'updated_at', 'title', 'authors', 'keywords',
-       'meta_keywords', 'meta_description', 'tags', 'summary', 'source'],
-      dtype='object')
-Columns in val_set: Index(['Unnamed: 0', 'id', 'domain', 'type', 'url', 'content', 'scraped_at',
-       'inserted_at', 'updated_at', 'title', 'authors', 'keywords',
-       'meta_keywords', 'meta_description', 'tags', 'summary', 'source'],
-      dtype='object')
-Columns in test_set: Index([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 'label', 'content'], dtype='object')
-F1 Score on Validation Set (SVM + TF-IDF): 0.89
-F1 Score on Test Set (SVM + TF-IDF): 0.03" 
+> Note: Low F1 on LIAR is expected due to class imbalance and domain shif
+
+---
+
+### Required Files
+
+Place the following files in the **same directory** as `Part4Evaluation.ipynb`:
+
+- `train_set.csv`  
+- `val_set.csv`  
+- **One of the following** test sets depending on what you're running:
+  - `test_set.csv` — original FakeNewsCorpus test split
+  - `joint_contents.csv` — FakeNewsCorpus + scraped articles
+  - `test_cleaned.tsv` — LIAR dataset (saved as `.tsv` but is comma-separated)
+
+---
+
+### How to Run the Notebook
+
+1. Make sure Python is installed and activate your environment.
+2. Install required dependencies:
+
+```bash
+pip install pandas scikit-learn
