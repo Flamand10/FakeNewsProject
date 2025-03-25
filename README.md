@@ -58,6 +58,11 @@ Each file should contain a `content` column and optionally a `summary` column.
 
 # Part 3: Advanced Model
 
+
+
+
+# Part 4: Evaluation
+
 ## Code for the advanced model
 Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
 
@@ -97,9 +102,6 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 2. Install the required dependencies:
 'pip install pandas nltk'
 
-
-
-# Part 4: Evaluation
 
 ## Result from `Part4Evaluation.ipynb`:
 This notebook evaluates the performance of an SVM + TF-IDF model on three different test sets:  
