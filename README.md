@@ -90,7 +90,7 @@ This notebook evaluates the performance of an SVM + TF-IDF model on three differ
 |----------------------------|---------------|---------|
 | FakeNewsCorpus             | 0.89          | 0.89    |
 | FNC + 800 scraped articles | 0.89          | 0.90    |
-| LIAR (cross-domain)        | 0.89          | 0.03    |
+| LIAR (cross-domain)        | 0.05          | 0.03    |
 
 > Note: Low F1 on LIAR is expected due to class imbalance and domain shif
 
@@ -101,11 +101,13 @@ This notebook evaluates the performance of an SVM + TF-IDF model on three differ
 Place the following files in the **same directory** as `Part4Evaluation.ipynb`:
 
 - `train_set.csv`  
-- `val_set.csv`  
-- **One of the following** test sets depending on what you're running:
-  - `test_set.csv` — original FakeNewsCorpus test split
-  - `joint_contents.csv` — FakeNewsCorpus + scraped articles
-  - `test_cleaned.tsv` — LIAR dataset (saved as `.tsv` but is comma-separated)
+- `val_set.csv` — validation split for the FakeNewsCorpus  
+- `valid.tsv` — validation set for the LIAR dataset (tab-separated)  
+
+**One of the following** test sets depending on which dataset you're using:
+- `test_set.csv` — original FakeNewsCorpus test split  
+- `joint_contents.csv` — FakeNewsCorpus + scraped articles  
+- `test_cleaned.tsv` — LIAR dataset (saved as `.tsv` but is comma-separated)
 
 ---
 
