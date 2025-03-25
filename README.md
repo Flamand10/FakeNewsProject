@@ -48,11 +48,50 @@ Each file should contain a `content` column and optionally a `summary` column.
 2. Install the required dependencies:
 'pip install pandas nltk'
 ---
+## Result from the `SplittingData.ipynb`
+
+This script loads a cleaned dataset (`995,000_rows_cleaned.csv`) and splits it into:
+- **Training set (80%)**
+- **Validation set (10%)**
+- **Test set (10%)**
+
+Each split is saved as a separate CSV file for use in later stages of the pipeline.
+
+---
+
+The script was run on `995,000_rows_cleaned.csv` and produced the following splits:
+
+### Split Summary
+
+| Split         | Rows     |
+|---------------|----------|
+| Training Set  | 796,000  |
+| Validation Set| 99,500   |
+| Test Set      | 99,500   |
+
+> Split files were saved as:
+> - `train_set.csv`  
+> - `val_set.csv`  
+> - `test_set.csv`
+
+---
+
+### Required File
+
+Place the following input file in the **same directory** as the script:
+
+- `995,000_rows_cleaned.csv` — fully preprocessed dataset
+
+---
+
+### How to Run the Script
+
+1. Make sure Python is installed and activate your environment.
+2. Install the required dependency:
+'pip install pandas scikit-learn'
 
 
-
-
-
+<br><br>
 
 # Part 2: Simple Logistic Regression Model
 
@@ -95,13 +134,13 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 ---
 
 
-
+<br><br>
 
 # Part 3: Advanced Model
 ## Code for the advanced model
 Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
 
-
+<br><br>
 
 # Part 4: Evaluation
 
