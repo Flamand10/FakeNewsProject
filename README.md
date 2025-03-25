@@ -92,7 +92,7 @@ Place the following input file in the **same directory** as the script:
 
 ### Exploring data
 In the file `Display_af_995000.ipynb`We show our representation of the data set for manual exploration.
-The file required to run the sscript is 
+The file required to run the sscript is `995,000_rows_cleaned.csv`.
 
 <br><br>
 
