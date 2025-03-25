@@ -56,23 +56,13 @@ Each file should contain a `content` column and optionally a `summary` column.
 
 # Part 2: Simple Logistic Regression Model
 
+## Cleaning the articles from graded assignment 2
 
-
-
-
-# Part 3: Advanced Model
-## Code for the advanced model
-Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
-
-
-
-# Part 4: Evaluation
-
-## Result from `800AndLiarClean.ipynb`
+### Result from `800AndLiarClean.ipynb`
 
 This notebook was run on two datasets:  
 1. `bbc_articles.csv` (scraped articles)  
-2. `test.tsv` (LIAR dataset)
+2. `test.tsv` (LIAR dataset)  (Will be used for part 4 later, but is just in the same notebook as the cleaning of the articles)
 
 ### Vocabulary Reduction Summary
 
@@ -83,7 +73,7 @@ This notebook was run on two datasets:
 
 > Cleaned files were saved as:
 > - `bbc_articles_cleaned.csv`  
-> - `test_cleaned.tsv`
+> - `test_cleaned.tsv` (Will be used in part 4)
 
 ---
 
@@ -103,6 +93,20 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 'pip install pandas nltk'
 
 ---
+
+
+
+
+# Part 3: Advanced Model
+## Code for the advanced model
+Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
+
+
+
+# Part 4: Evaluation
+
+## Requirements
+Make sure to do all previous steps for running the code for all parts up until part 4. Have the required file in the ssame directory as the code file.
 
 ## Result from `Part4Evaluation.ipynb`:
 This notebook evaluates the performance of an SVM + TF-IDF model on three different test sets:  
