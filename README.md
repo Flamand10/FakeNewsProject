@@ -135,7 +135,68 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 'pip install pandas nltk'
 
 ---
+# Logistic Regression Analysis
 
+This Jupyter Notebook implements a **Logistic Regression model** to classify news articles as either **reliable** or **fake**. It follows previous preprocessing steps and builds a baseline model using simple text vectorization and logistic regression. 
+
+---
+
+## **Workflow Overview**
+### **1. Load the Dataset**
+- Reads the preprocessed datasets:
+  - `train_set.csv`
+  - `val_set.csv`
+  - `test_set.csv`
+- Verifies the presence of required columns.
+
+### **2. Preprocessing and Labeling**
+- Converts article labels into **binary labels**:
+  - **1** → "reliable"
+  - **0** → "fake"
+
+### **3. Feature Extraction**
+- Uses **CountVectorizer** (Bag of Words model) to transform text into numerical features.
+
+### **4. Train a Logistic Regression Model**
+- Fits a **Logistic Regression classifier** on the training data.
+- Uses **default hyperparameters** to establish a baseline model.
+
+### **5. Model Evaluation**
+- Evaluates the model using:
+  - **Validation F1 Score**
+  - **Test F1 Score**
+- It then prints the f1 scores for the validation set and test set. 
+
+---
+
+## **Required Files**
+Make sure the following files are in the **same directory** as the notebook:
+- `train_set.csv`  
+- `val_set.csv`  
+- `test_set.csv`  
+
+---
+
+## **How to Run the Notebook**
+1. Install dependencies:
+   1. Pandas
+   2. Scikit-learn
+      1. CountVectorizer
+      2. LogisticRegression
+      3. f1_score
+2. Make sure that you have the required datasets in the same directory
+   1. The train set
+   2. The validation set
+   3. The test set
+3. 
+## **How this**
+This code in this notebook is run 3 times, firstly it is run on the train, validation and test set produced from the SplittingData.ipynb. For which we need the: 
+1. Train set (train_set.csv)
+2. Validation set (val_set.csv)
+3. Test set (test_set.csv)
+
+Secondly the code is run for the joint.ipynb file where the data is trained on the train_set.csv that is then merged with the 
+#### Result from the logistic regression analysis on the 
 
 <br><br>
 
