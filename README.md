@@ -90,6 +90,9 @@ Place the following input file in the **same directory** as the script:
 2. Install the required dependency:
 'pip install pandas scikit-learn'
 
+### Exploring data
+In the file `Display_af_995000.ipynb`We show our representation of the data set for manual exploration.
+The file required to run the sscript is 
 
 <br><br>
 
