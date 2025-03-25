@@ -1,3 +1,7 @@
+# All libraries needed to run the code
+
+
+
 # Part 1: Data Processing 
 
 ## Result from `FakeNewsProject.py`
