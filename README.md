@@ -102,6 +102,7 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 2. Install the required dependencies:
 'pip install pandas nltk'
 
+---
 
 ## Result from `Part4Evaluation.ipynb`:
 This notebook evaluates the performance of an SVM + TF-IDF model on three different test sets:  
