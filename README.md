@@ -93,6 +93,10 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 'pip install pandas nltk'
 
 
+### Code for the advanced model
+Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
+
+
 
 
 # Part 4: Evaluation
