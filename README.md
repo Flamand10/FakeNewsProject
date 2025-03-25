@@ -45,6 +45,9 @@ Each file should contain a `content` column and optionally a `summary` column.
 'pip install pandas nltk'
 ---
 
+# Part 2: Simple Logistic Regression Model
+
+# Part 3: Advanced Model
 
 
 ### Result from '800AndLiarClean.ipynb':
@@ -71,7 +74,7 @@ Each file should contain a `content` column and optionally a `summary` column.
 
 
 
-# Part 4
+# Part 4: Evaluation
 
 ## Result from 'Part4Evaluation.ipynb':
 This notebook evaluates the performance of an SVM + TF-IDF model on three different test sets:  
