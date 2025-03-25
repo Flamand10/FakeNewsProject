@@ -45,7 +45,16 @@ Each file should contain a `content` column and optionally a `summary` column.
 'pip install pandas nltk'
 ---
 
+
+
+
+
+
 # Part 2: Simple Logistic Regression Model
+
+
+
+
 
 # Part 3: Advanced Model
 
