@@ -49,27 +49,39 @@ Each file should contain a `content` column and optionally a `summary` column.
 
 # Part 3: Advanced Model
 
+## Result from `800AndLiarClean.ipynb`
 
-### Result from '800AndLiarClean.ipynb':
-- "Processing columns: ['region', 'title', 'summary', 'link'] in bbc_articles.csv <br>
+This notebook was run on two datasets:  
+1. `bbc_articles.csv` (scraped articles)  
+2. `test.tsv` (LIAR dataset)
 
-   Stats for bbc_articles.csv:
-   Original Vocabulary Size: 6732
-   Vocabulary Size After Stopword Removal: 4849
-   Reduction Rate After Stopword Removal: 27.97%
-   Vocabulary Size After Stemming: 3707
-   Reduction Rate After Stemming: 23.55%
-   Successfully saved cleaned dataset: bbc_articles_cleaned.csv
-   Processing columns: ['col_0', 'col_1', 'col_2', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7', 'col_13'] in test.tsv <br>
-   
-   Stats for test.tsv:
-   Original Vocabulary Size: 7464
-   Vocabulary Size After Stopword Removal: 4339
-   Reduction Rate After Stopword Removal: 41.87%
-   Vocabulary Size After Stemming: 3303
-   Reduction Rate After Stemming: 23.88%
-   Successfully saved cleaned dataset: test_cleaned.tsv" <br><br>
+### Vocabulary Reduction Summary
 
+| Dataset           | Original Vocab | After Stopword Removal | Reduction (%) | After Stemming | Reduction (%) |
+|-------------------|----------------|-------------------------|----------------|----------------|----------------|
+| bbc_articles.csv  | 6,732          | 4,849                   | 27.97%         | 3,707          | 23.55%         |
+| test.tsv          | 7,464          | 4,339                   | 41.87%         | 3,303          | 23.88%         |
+
+> Cleaned files were saved as:
+> - `bbc_articles_cleaned.csv`  
+> - `test_cleaned.tsv`
+
+---
+
+### Required Files
+
+Place the following input files in the **same directory** as `800AndLiarClean.ipynb`:
+
+- `bbc_articles.csv` — scraped article dataset  
+- `test.tsv` — original LIAR dataset (TSV file, comma-separated)
+
+---
+
+### How to Run the Notebook
+
+1. Make sure Python is installed and activate your environment.
+2. Install the required dependencies:
+'pip install pandas nltk'
 
 
 
