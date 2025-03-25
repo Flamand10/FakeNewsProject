@@ -58,6 +58,11 @@ Each file should contain a `content` column and optionally a `summary` column.
 
 # Part 3: Advanced Model
 
+## Code for the advanced model
+Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
+
+
+
 ## Result from `800AndLiarClean.ipynb`
 
 This notebook was run on two datasets:  
@@ -91,11 +96,6 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 1. Make sure Python is installed and activate your environment.
 2. Install the required dependencies:
 'pip install pandas nltk'
-
-
-### Code for the advanced model
-Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
-
 
 
 
