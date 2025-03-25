@@ -1,5 +1,7 @@
 # Part 1: Data Processing 
 
+## Result from `FakeNewsProject.py`
+
 This script cleans and preprocesses raw text data by:
 - Tokenizing text into words
 - Removing stopwords and non-alphabetic tokens
@@ -7,9 +9,6 @@ This script cleans and preprocesses raw text data by:
 - Saving the cleaned dataset with `_cleaned` added to the filename
 - Reporting vocabulary reduction statistics
 
----
-
-## Result from `FakeNewsProject.py`
 
 This script was run on two CSV files:  
 1. `news_sample.csv`  
@@ -44,7 +43,7 @@ Each file should contain a `content` column and optionally a `summary` column.
 1. Make sure Python is installed and activate your environment.
 2. Install the required dependencies:
 'pip install pandas nltk'
-
+---
 
 
 
