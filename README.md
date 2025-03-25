@@ -1,23 +1,49 @@
-# FakeNewsProject
+# Part 1: Data Processing 
 
-[nltk_data] Downloading package stopwords to
-[nltk_data]     C:\Users\Caspe\AppData\Roaming\nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
-[nltk_data] Downloading package punkt to
-[nltk_data]     C:\Users\Caspe\AppData\Roaming\nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
-Original Vocabulary Size: 22704
-Vocabulary Size After Stopword Removal: 15415
-Reduction Rate After Stopword Removal: 32.10%
-Vocabulary Size After Stemming: 10226
-Reduction Rate After Stemming: 33.66%
- Successfully saved cleaned dataset: news_sample_cleaned.csv
-Original Vocabulary Size: 5637631
-Vocabulary Size After Stopword Removal: 1259204
-Reduction Rate After Stopword Removal: 77.66%
-Vocabulary Size After Stemming: 1098642
-Reduction Rate After Stemming: 12.75%
- Successfully saved cleaned dataset: 995,000_rows_cleaned.csv
+This script cleans and preprocesses raw text data by:
+- Tokenizing text into words
+- Removing stopwords and non-alphabetic tokens
+- Applying stemming
+- Saving the cleaned dataset with `_cleaned` added to the filename
+- Reporting vocabulary reduction statistics
+
+---
+
+## Result from `FakeNewsProject.py`
+
+This script was run on two CSV files:  
+1. `news_sample.csv`  
+2. `995,000_rows.csv`  
+
+### Vocabulary Reduction Summary
+
+| Dataset              | Original Vocab | After Stopword Removal | Reduction (%) | After Stemming | Reduction (%) |
+|----------------------|----------------|-------------------------|----------------|----------------|----------------|
+| news_sample.csv      | 22,704         | 15,415                  | 32.10%         | 10,226         | 33.66%         |
+| 995,000_rows.csv     | 5,637,631      | 1,259,204               | 77.66%         | 1,098,642      | 12.75%         |
+
+> Cleaned files were saved as:
+> - `news_sample_cleaned.csv`  
+> - `995,000_rows_cleaned.csv`
+
+---
+
+### Required Files
+
+Place the following input CSVs in the **same directory** as `FakeNewsProject.py`:
+
+- `news_sample.csv`  
+- `995,000_rows.csv`  
+
+Each file should contain a `content` column and optionally a `summary` column.
+
+---
+
+### How to Run the Script
+
+1. Make sure Python is installed and activate your environment.
+2. Install the required dependencies:
+'pip install pandas nltk'
 
 
 
@@ -85,6 +111,4 @@ Place the following files in the **same directory** as `Part4Evaluation.ipynb`:
 
 1. Make sure Python is installed and activate your environment.
 2. Install required dependencies:
-
-```bash
-pip install pandas scikit-learn
+'pip install pandas scikit-learn'
