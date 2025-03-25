@@ -61,16 +61,12 @@ Each file should contain a `content` column and optionally a `summary` column.
 
 
 # Part 3: Advanced Model
-
-
-
-
-# Part 4: Evaluation
-
 ## Code for the advanced model
 Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
 
 
+
+# Part 4: Evaluation
 
 ## Result from `800AndLiarClean.ipynb`
 
