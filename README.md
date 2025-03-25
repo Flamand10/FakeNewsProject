@@ -88,7 +88,7 @@ Place the following input files in the **same directory** as `800AndLiarClean.ip
 
 # Part 4: Evaluation
 
-## Result from 'Part4Evaluation.ipynb':
+## Result from `Part4Evaluation.ipynb`:
 This notebook evaluates the performance of an SVM + TF-IDF model on three different test sets:  
 1. The original FakeNewsCorpus  
 2. The FakeNewsCorpus extended with 800 scraped articles  
