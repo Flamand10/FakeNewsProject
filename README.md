@@ -86,13 +86,13 @@ Below are the word frequency distributions from the original and cleaned dataset
 
 #### Original Dataset (Before Cleaning)
 
-![Original Plot 1](media/original_freq_plot_1.png)
-![Original Plot 2](media/original_freq_plot_2.png)
+![Original Plot 1](media_images_original_freq_plot_1_0e4f988ea9b64a0b9548(1).png)  
+![Original Plot 2](media_images_original_freq_plot_1_9ae4c383e178bc54f0f8(1).png)
 
 #### Cleaned Dataset (After Cleaning)
 
-![Cleaned Plot 1](media/cleaned_freq_plot_1.png)
-![Cleaned Plot 2](media/cleaned_freq_plot_2.png)
+![Cleaned Plot 1](media_images_cleaned_freq_plot_2_89bb85b7a66c1e248cc1.png)  
+![Cleaned Plot 2](media_images_cleaned_freq_plot_2_d46bd1d5bb55c07e23cd.png)
 
 ---
 
