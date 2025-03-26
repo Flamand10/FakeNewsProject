@@ -261,6 +261,18 @@ Lastly the code is run again trained on the original train_set.csv, where the te
 | test_cleaned.tsv        | 0.04          | 0.01    |
 
 >Note: that the test_cleaned.tsv dataset is not run in part two but instead later in part 4, as it is the liar dataset.
+# **JoinedFile.ipynb**
+
+This script merges two datasets:
+1. The original training set (`train_set.csv`)
+2. Scraped BBC articles (`bbc_articles.csv`)
+
+The merged dataset is saved as `joint_contents.csv` with consistent labeling.
+
+### Prerequisites
+
+- Python 3.x
+- pandas library
 # Part 3: Advanced Model
 ## Code for the advanced model
 Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
