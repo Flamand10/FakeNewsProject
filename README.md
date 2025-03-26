@@ -99,6 +99,7 @@ Each file must include a `content` column with the text to analyze.
 1. Make sure Python is installed and your environment is active.
 2. Install the required dependencies:
 'pip install pandas nltk matplotlib wandb'
+3. Follow the wandb instructions in terminal, to plot to your user
 
 
 ---
