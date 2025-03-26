@@ -195,7 +195,9 @@ This code in this notebook is run 3 times, firstly it is run on the train, valid
 2. Validation set (val_set.csv)
 3. Test set (test_set.csv)
 
-Secondly the code is run for the joint.ipynb file where the data is trained on the train_set.csv that is then merged with the 
+Secondly the code is run for the joint.ipynb file where the data is trained on the train_set.csv that is then merged with the original extra reliable 800 articles we scraped from BBC. 
+
+Lastly the code is run again trained on the original train_set.csv, where the test and validation set are from the LIAR dataset. These datasets are then cleaned and run later in part 4 (test_cleaned.tsv). 
 #### Result from the logistic regression analysis on the 3 datasets
 | Dataset                     | Validation F1 | Test F1 |
 |----------------------------|---------------|---------|
