@@ -189,15 +189,20 @@ Make sure the following files are in the **same directory** as the notebook:
    2. The validation set
    3. The test set
 3. 
-## **How this**
+## **How this code is run**
 This code in this notebook is run 3 times, firstly it is run on the train, validation and test set produced from the SplittingData.ipynb. For which we need the: 
 1. Train set (train_set.csv)
 2. Validation set (val_set.csv)
 3. Test set (test_set.csv)
 
 Secondly the code is run for the joint.ipynb file where the data is trained on the train_set.csv that is then merged with the 
-#### Result from the logistic regression analysis on the 
-
+#### Result from the logistic regression analysis on the 3 datasets
+| Dataset                     | Validation F1 | Test F1 |
+|----------------------------|---------------|---------|
+| train_csv             | 0.86          | 0.86    |
+| Joint.csv | 0.86          | 0.86    |
+| test_cleaned.tsv        | 0.04          | 0.01    |
+<br><br>
 <br><br>
 
 # Part 3: Advanced Model
