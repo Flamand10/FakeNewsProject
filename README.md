@@ -58,6 +58,50 @@ Each file should contain a `content` column and optionally a `summary` column.
 2. Install the required dependencies:
 'pip install pandas nltk'
 ---
+## Result from `Counting_Analysis.py`
+
+This script analyzes the most frequent words in the original and cleaned datasets by:
+- Tokenizing the text content using NLTK
+- Counting word frequency with `collections.Counter`
+- Plotting the top 100 most frequent words from each file
+- Logging both the frequency data and plots to Weights & Biases (wandb)
+
+This allows for a direct comparison of how cleaning affects the vocabulary distribution.
+
+This script was run on two CSV files:  
+1. `995,000_rows.csv`  
+2. `995,000_rows_cleaned.csv`  
+
+### Output Summary
+
+- Logged the 100 most frequent words (before and after cleaning) to wandb
+- Generated frequency bar plots for both versions of the dataset
+- Demonstrated how stopword removal and stemming significantly reduce noisy or common word presence
+
+> Word frequency data and plots were logged under the wandb project:
+> - `text-cleaning-vocab-analysis`
+
+---
+
+### Required Files
+
+Place the following input CSVs in the **same directory** as `Counting_Analysis.py`:
+
+- `995,000_rows.csv`  
+- `995,000_rows_cleaned.csv`  
+
+Each file must include a `content` column with the text to analyze.
+
+---
+
+### How to Run the Script
+
+1. Make sure Python is installed and your environment is active.
+2. Install the required dependencies:
+'pip install pandas nltk matplotlib wandb'
+
+
+---
 ## Result from the `SplittingData.ipynb`
 
 This script loads a cleaned dataset (`995,000_rows_cleaned.csv`) and splits it into:
