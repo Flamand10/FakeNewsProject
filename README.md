@@ -213,8 +213,7 @@ Lastly the code is run again trained on the original train_set.csv, where the te
 | train_csv             | 0.86          | 0.86    |
 | Joint.csv | 0.86          | 0.86    |
 | test_cleaned.tsv        | 0.04          | 0.01    |
-<br><br>
-<br><br>
+
 
 # Part 3: Advanced Model
 ## Code for the advanced model
