@@ -8,6 +8,7 @@
 - nltk.download('stopwords')
 - nltk.download('punkt')
 - sklearn
+- wandb
 
 
 
