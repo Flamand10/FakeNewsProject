@@ -223,6 +223,7 @@ This Jupyter Notebook implements a **Logistic Regression model** to classify new
 - It then prints the f1 scores for the validation set and test set. 
 
 ---
+# **Result from the logistic_regression.ipynb**
 
 ## **Required Files**
 Make sure the following files are in the **same directory** as the notebook:
