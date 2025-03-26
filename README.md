@@ -214,7 +214,7 @@ Lastly the code is run again trained on the original train_set.csv, where the te
 | Joint.csv | 0.86          | 0.86    |
 | test_cleaned.tsv        | 0.04          | 0.01    |
 
-
+>Note: that the test_cleaned.tsv dataset is not run in part two but instead later in part 4, as it is the liar dataset.
 # Part 3: Advanced Model
 ## Code for the advanced model
 Look at the code in the jupiter notebook file `Part4Evaluation.ipynb` In the file we run the code for part 4. No code had to be ran in part 3.
