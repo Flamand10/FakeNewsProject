@@ -82,6 +82,19 @@ This script was run on two CSV files:
 > - `text-cleaning-vocab-analysis`
 
 ---
+Below are the word frequency distributions from the original and cleaned datasets. These help visualize the impact of preprocessing steps such as stopword removal and stemming.
+
+#### Original Dataset (Before Cleaning)
+
+![Original Plot 1](media/original_freq_plot_1.png)
+![Original Plot 2](media/original_freq_plot_2.png)
+
+#### Cleaned Dataset (After Cleaning)
+
+![Cleaned Plot 1](media/cleaned_freq_plot_1.png)
+![Cleaned Plot 2](media/cleaned_freq_plot_2.png)
+
+---
 
 ### Required Files
 
