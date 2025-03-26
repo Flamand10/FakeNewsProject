@@ -1,13 +1,13 @@
 # All libraries needed to run the code
-nltk
-pandas as pd
-os
-re
-collections
-matplotlib.pyplot
-nltk.download('stopwords')
-nltk.download('punkt')
-sklearn
+- nltk
+- pandas as pd
+- os
+- re
+- collections
+- matplotlib.pyplot
+- nltk.download('stopwords')
+- nltk.download('punkt')
+- sklearn
 
 
 
