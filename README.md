@@ -331,8 +331,6 @@ Place the following files in the **same directory** as `Part4Evaluation.ipynb`:
 - `train_set.csv`  
 - `val_set.csv` — validation split for the FakeNewsCorpus  
 - `valid.tsv` — validation set for the LIAR dataset (tab-separated)  
-
-**One of the following** test sets depending on which dataset you're using:
 - `test_set.csv` — original FakeNewsCorpus test split  
 - `joint_contents.csv` — FakeNewsCorpus + scraped articles  
 - `test_cleaned.tsv` — LIAR dataset (saved as `.tsv` but is comma-separated)
