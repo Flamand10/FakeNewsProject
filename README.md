@@ -87,13 +87,17 @@ Below are the word frequency distributions from the original and cleaned dataset
 ### Word Frequency Visualization
 
 #### Original Dataset — Full Vocabulary Distribution
-
+Original 100 most frequent words:
 ![Original Plot 1](media_images_original_freq_plot_1_0e4f988ea9b64a0b9548(1).png)  
+
+Original 10000 most frequent words:
 ![Original Plot 2](media_images_original_freq_plot_1_9ae4c383e178bc54f0f8(1).png)
 
 #### Cleaned Dataset — Vocabulary After Preprocessing
-
+Cleaned 100 most frequent words:
 ![Cleaned Plot 1](media_images_cleaned_freq_plot_2_89bb85b7a66c1e248cc1.png)  
+
+Cleaned 10000 most frequent words:
 ![Cleaned Plot 2](media_images_cleaned_freq_plot_2_d46bd1d5bb55c07e23cd.png).
 
 
