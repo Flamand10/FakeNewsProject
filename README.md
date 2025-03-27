@@ -78,8 +78,7 @@ This script was run on two CSV files:
 - Generated frequency bar plots for both versions of the dataset
 - Demonstrated how stopword removal and stemming significantly reduce noisy or common word presence
 
-> Word frequency data and plots were logged under the wandb project:
-> - `text-cleaning-vocab-analysis`
+> Link to Wandb: https://wandb.ai/zxt667-university-of-copenhagen/text-cleaning-vocab-analysis/runs/6caa010y/workspace
 
 ---
 Below are the word frequency distributions from the original and cleaned datasets. These help visualize the impact of preprocessing steps such as stopword removal and stemming.
