@@ -84,6 +84,16 @@ This script was run on two CSV files:
 ---
 Below are the word frequency distributions from the original and cleaned datasets. These help visualize the impact of preprocessing steps such as stopword removal and stemming.
 
+
+### Word Frequency Visualization
+
+We visualized the top 10,000 most frequent words from the original and cleaned datasets using NLTK and `collections.Counter`. The plots were logged with Weights & Biases for easy comparison.
+
+- **Original dataset**: Dominated by stopwords and punctuation like `"the"`, `"to"`, `","`, and `"."`.
+- **Cleaned dataset**: Focuses on meaningful, stemmed terms like `"said"`, `"state"`, `"presid"`, and `"govern"`.
+
+These changes highlight the impact of preprocessing on vocabulary quality.
+
 #### Original Dataset (Before Cleaning)
 
 ![Original Plot 1](media_images_original_freq_plot_1_0e4f988ea9b64a0b9548(1).png)  
